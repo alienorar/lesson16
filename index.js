@@ -54,28 +54,28 @@ function symmetricDifference(massArr1, massArr2) {
 
 // TAsk 29
 
-// Tushunmadim 
+
 
 // Task 30
 
 function uniqueCharacters(str) {
-    let result = [];
+    let result ="";
     for (let i = 0; i < str.length; i++) {
         if (!result.includes(str[i])) {
-            result.push(str[i]);
+            result += str[i]
         }
     }
-    return result.join("");
+    return result;
 }
 
-// console.log(uniqueCharacters("hello world")); // "helo wrd"
+console.log(uniqueCharacters("hello world")); // "helo wrd"
 
 // Task 31
 
 function findPairs(arr, target) {
     let result = [];
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
+        for (let j = 0; j < i; j++) {
             if (arr[i] + arr[j] === target) {
                 result.push([arr[i], arr[j]]);
             }
@@ -84,7 +84,7 @@ function findPairs(arr, target) {
     return result
 }
 
-// console.log(findPairs([1, 2, 3, 4, 5], 6)); // [[1, 5], [2, 4]]
+console.log(findPairs([1, 2, 3, 4, 5], 6)); // [[1, 5], [2, 4]]
 
 // Task 32
 
@@ -116,11 +116,11 @@ function countPalindromNumbers(num) {
 
 // TAsk 34
 
-let joinArr = [1, 2, 3, 4, 5]
 
-function withCommas() {
-    let newJoinArr = joinArr.join(", ")
-   return newJoinArr
-}
 
-console.log(withCommas([1, 2, 3, 4, 5]));
+// function withCommas(new_arr2) {
+//     let new_arr2 = new_arr2.join(", ")
+//    return new_arr2
+// }
+
+// console.log(withCommas([1, 2, 3, 4, 5]));
