@@ -101,10 +101,10 @@ function squareNumbers(arr) {
 
 // Task 33
 
-function countPalindromNumbers(num) {
+function countPalindromNumbers(start,end) {
     let countStr = []
-    for (let i = 1; i <= num; i++) {
-        let reverseNum = parseInt(i.toString().split('').reverse().join(''));
+    for (let i = start; i <= end; i++) {
+        let reverseNum = +(i.toString().split('').reverse().join(''));
         if (i === reverseNum) {
             countStr.push(i)
         }
@@ -112,15 +112,15 @@ function countPalindromNumbers(num) {
     return countStr
 }
 
-// countPalindromNumbers(100); 
+console.log(countPalindromNumbers(1, 100));
 
 // TAsk 34
 
 
 
-// function withCommas(new_arr2) {
-//     let new_arr2 = new_arr2.join(", ")
-//    return new_arr2
-// }
+function withCommas(new_arr2) {
+    let result = new_arr2.join(", ")
+   return result
+}
 
-// console.log(withCommas([1, 2, 3, 4, 5]));
+console.log(withCommas([1, 2, 3, 4, 5]));
